@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Link Modification Example</title>
+</head>
+<body>
+    <h1>Link Modification Demo</h1>
+    
+    <!-- These are the links we'll modify -->
+    <a href="https://www.google.com">Visit Google</a><br>
+    <a href="https://www.facebook.com">Visit Facebook</a><br>
+    <a href="https://www.twitter.com">Visit Twitter</a>
+    
+    <script>
+        // Wait for the page to fully load
+        window.onload = function() {
+            // Get ALL anchor elements (correct method name)
+            var links = document.getElementsByTagName('a');
+            
+            // Change the first link
+            links[0].href = 'https://www.sololearn.com';
+            links[0].textContent = 'Visit SoloLearn';
+            
+            // We can modify other links too
+            links[1].href = 'https://www.github.com';
+            links[1].textContent = 'Visit GitHub';
+            
+            // Add a new link dynamically
+            var newLink = document.createElement('a');
+            newLink.href = 'https://www.freecodecamp.org';
+            newLink.textContent = 'Visit freeCodeCamp';
+            document.body.appendChild(document.createElement('br'));
+            document.body.appendChild(newLink);
+        };
+    </script>
+</body>
+</html>
