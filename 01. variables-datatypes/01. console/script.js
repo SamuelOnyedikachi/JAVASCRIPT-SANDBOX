@@ -19,3 +19,9 @@ console.groupEnd();
 
 const styles = 'padding: 10px; background-color: #f0f0f0; color: green; font-size: 16px;';
 console.log('%cThis is a styled message', styles);
+
+const myAlert =() =>{
+    console.log('hello world');
+}
+
+setInterval(myAlert, 1000);
